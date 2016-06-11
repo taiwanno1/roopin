@@ -1,0 +1,80 @@
+/***********************
+        GENERAL
+***********************/
+.container-fluid{
+  padding: 0;
+}
+.w1024{
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+li{
+  list-style: none;
+  a:hover, :focus {
+    text-decoration: none;
+  }
+}
+.outest-col{
+  padding: 0;
+}
+
+a{
+  color: #444;
+}
+
+a:hover{
+  color: #8DC63F;
+}
+h3{
+  @include sideGreen;
+}
+
+/***********************
+        NAV
+***********************/
+.top-nav{
+  background-color: #EFEFEF;
+  height: 30px;
+  line-height: 30px;
+
+  .mobile-span{
+    margin-right: 20px;
+  }
+
+  li{
+    float: left;
+    padding: 0 5px;
+  }
+
+  :nth-child(4){
+    padding-right: 0;
+  }
+}
+
+.bot-nav{
+  height: 80px;
+  line-height: 80px;
+  #logo{
+    .logo-img{
+      width: 100px;
+    }
+  }
+  .w1024{
+    padding-left: 7px;
+  }
+
+  li{
+    float: left;
+    padding: 0 5px;
+  }
+
+  :nth-child(7){
+    padding-right: 0;
+  }
+  .right{
+    .active{
+      a{color: #8DC63F;}}
+  }
+}

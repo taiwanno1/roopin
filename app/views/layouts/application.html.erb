@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Roopin</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+  <body>
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="col-xs-12 outest-col">
+
+          <nav>
+            <div class="top-nav">
+              <div class="w1024 clearfix">
+                <div class="left pull-left">
+                  <i class="fa fa-mobile fa-lg" aria-hidden="true"></i><span class="mobile-span"> +211 511 22 26</span>
+                  <i class="fa fa-envelope" aria-hidden="true"></i>
+                  <span> info@roopin.com</span>
+                </div>
+                <div class="right pull-right">
+                  <ul class="">
+                    <li><a href="https://www.facebook.com/TaiwannoI"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="bot-nav">
+              <div class="w1024 clearfix">
+                <div id="logo" class="pull-left"><a href="#">
+                <%= image_tag("roopin.png", class: "logo-img") %></a></div>
+                <div class="right pull-right">
+                  <ul>
+                    <li class="active"><a href="#"><strong>HOME</strong></a></li>
+                    <li><a href="#"><strong>ABOUT</strong></a></li>
+                    <li><a href="#"><strong>TEAM</strong></a></li>
+                    <li><a href="#"><strong>WORKS</strong></a></li>
+                    <li><a href="#"><strong>BLOG</strong></a></li>
+                    <li><a href="#"><strong>CLIENTS</strong></a></li>
+                    <li><a href="#"><strong>CONTACT</strong></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+          <%= yield %>
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,511 @@
+hr{
+  color: #DFDFDF;
+  height: 1px;
+}
+@mixin sideGreen {
+  height: 20px;
+  line-height: 20px;
+  border-left-style: outset;
+  border-left-width: 4px;
+  border-left-color: #8DC63F;
+  padding-left: 10px;
+}
+
+@mixin buttonSet{
+  margin-top: 30px;
+  width: 150px;
+  height: 30px;
+  letter-spacing: -0.4px;
+  background-color: rgba(0,0,0,0);
+  border-style: outset;
+  border-color: black;
+  border-radius: 15px;
+  font-size: 0.1px;
+}
+@mixin midButton{
+  display: flex;
+  align-items:center;
+  width: 100%;
+  height: 150px;
+}
+
+@mixin vertiMid{
+  display:flex;
+  align-items:center;
+}
+
+@mixin iconCircle{
+  width: 40px;
+  height: 40px;
+  line-height: 36px;
+  text-align: center;
+  border-style: solid;
+  border-color: black;
+  border-radius: 50%;
+  border-width: 2px;
+}
+/***********************
+        HEADER
+***********************/
+header{
+  width: 100%;
+  #bgvideo{
+    position: relative;
+    height: 612px;
+    overflow: hidden;
+
+    .frontpage-video{
+      position: absolute;
+      top: 0;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: 100%;
+      height: auto;
+      z-index: -100;
+      -webkit-transform: translate(-50%, -50%);
+         -moz-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, 0%);
+    }
+  }
+
+  .title{
+    text-align: left;
+    padding-top: 250px;
+    h1{
+      margin: 0;
+      line-height: 50px;
+      letter-spacing: 3px;
+      font-size: 4em;
+
+    }
+    p{
+      margin: 0;
+      font-size: 1.5em;
+    }
+    button{
+      margin-top: 22px;
+      width: 110px;
+      height: 30px;
+      letter-spacing: -0.4px;
+      background-color: rgba(0,0,0,0);
+      border-style: outset;
+      border-color: black;
+      border-radius: 15px;
+    }
+  }
+}
+/***********************
+         ABOUT
+***********************/
+#about-roopin{
+  height: 400px;
+  margin-top: 80px;
+
+  h3{
+    @include sideGreen;
+    margin-bottom: 40px
+  }
+  .about-left{
+    padding-left: 0;
+    p{
+      line-height: 25px;
+    }
+    button{
+      margin-top: 30px;
+      width: 150px;
+      height: 30px;
+      letter-spacing: -0.4px;
+      background-color: rgba(0,0,0,0);
+      border-style: outset;
+      border-color: black;
+      border-radius: 15px;
+      font-size: 0.1px;
+    }
+  }
+  .about-right{
+    padding-right: 0;
+    padding-left: 50px;
+    .wrap-icon{
+      @include iconCircle;
+    }
+  }
+}
+/***********************
+       STATISTICS
+***********************/
+#statistics{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 150px;
+  width: 100%;
+  margin: 0 auto;
+  .w1024{
+    width: 1024px;
+  }
+}
+/***********************
+         TEAM
+***********************/
+#team .person:nth-child(3n){padding-right: 0;padding-left: 30px;}
+#team .person:nth-child(3n+1){padding-left: 0;}
+#team{
+  margin-top: 100px;
+  height: 980px;
+  .person {
+    height: 450px;
+  }
+  h3{
+    @include sideGreen;
+    margin-bottom: 40px;
+  }
+
+  .team-img{
+    width: 306px;
+    height: 304.67px;
+  }
+
+  .person-name {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    height: 30px;
+    border-left-style: outset;
+    border-left-width: 3px;
+    border-left-color: #8DC63F;
+    padding-left: 10px;
+    h4{
+      margin: 0;
+      letter-spacing: 1px;
+      line-height: 15px;
+    }
+    p {
+      letter-spacing: 3px;
+      font-weight: 200;
+      line-height: 17px;
+    }
+  }
+  .person-contact {
+    padding-left: 13px;
+    a{
+      color: #C9C9C9;
+    }
+    a:hover{
+      color: #8DC63F;
+    }
+  }
+  .person-contact a:nth-child(2){
+    padding: 0 10px;
+  }
+}
+
+#boss{
+  height: 280px;
+  margin: 0 auto;
+  display:flex;
+  align-items:center;
+
+  .w1024{
+    width: 1024px;
+  }
+  .wrap-boss{
+    display:flex;
+    align-items:center;
+    img{
+      width: 220px;
+      margin-left: 86px;
+    }
+    .intro{
+      width: 600px;
+      padding-left: 45px;
+
+      h4{
+        letter-spacing: 2px;
+      }
+      .comp-owner{
+        font-weight: 300;
+        letter-spacing: 3.5px;
+      }
+      .describe-boss{
+        color: #737373;
+      }
+    }
+  }
+  img, .intro {
+    float: left;
+  }
+}
+/***********************
+         WORKS
+***********************/
+#works{
+  height: 1050px;
+  margin-top: 60px;
+  .work-bar{
+    display: flex;
+    justify-content:space-between;
+    height: 100px;
+    align-items:center;
+
+    .active{
+      background-color: #8DC63F;
+    }
+  }
+  h3{
+    @include sideGreen;
+    margin: 0;
+  }
+  ul{
+    margin: 0;
+    padding-left: 200px;
+  }
+  li{
+    float: left;
+    padding: 0 15px;
+    text-align: right;
+  }
+  li:nth-child(5) {padding-right: 0;}
+
+  .girls-photo{
+    img{
+      width: 304.6px;
+    }
+    .g2{
+      height: 300px;
+    }
+  }
+  .girls-photo .wrap-girls :nth-child(1){padding-bottom: 30px;}
+
+  .wrap-button{
+    @include midButton;
+    button{
+      @include buttonSet;
+      margin: 0 auto;
+    }
+  }
+
+}
+/***********************
+         BLOGS
+***********************/
+#blogs{
+
+  .blog{
+    margin-bottom: 30px;
+  }
+  img{
+    width: 304.6px;
+    height: auto;
+  }
+
+  h3{
+    margin-left: 15px;
+    margin-bottom: 50px;
+  }
+
+  .blog-text{
+    margin-top: 25px;
+    h4, p{
+      line-height: 25px;
+    }
+    h4{
+      margin-bottom: 15px;
+    }
+    p{
+      font-weight: 200;
+    }
+
+    .blog-time{
+      font-weight: normal;
+      color: #BBB
+    }
+  }
+
+  .wrap-button{
+    @include midButton;
+  }
+  button{
+    @include buttonSet;
+    margin: 0 auto;
+  }
+}
+/***********************
+        CLIENTS
+***********************/
+#client{
+  h3{
+    margin-left: 15px;
+  }
+  .client-logo{
+    width: 930px;
+    margin: 0 auto;
+    .wrap-client-logo{
+      @include vertiMid;
+      width: 90%;
+      height: 220px;
+      margin: 0 auto;
+      img{
+        width: 200px;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+  .bot-border{
+    border-bottom-style: solid;
+    border-bottom-color: #F2F2F2;
+    border-bottom-width: 1px;
+  }
+  .for-border{
+    position: relative;
+  }
+  .right-border{
+    position: absolute;
+    width: 1px;
+    height: 76%;
+    background-color: #F2F2F2;
+    right: -0.5px;
+    top:12%;
+  }
+}
+/***********************
+       CONTACT US
+***********************/
+#contact{
+  height: 400px;
+  .wrap-all-info{margin-top: 40px;}
+  h3{
+    margin-left: 15px;
+  }
+  .info{
+    @include vertiMid;
+    flex-direction:row;
+    margin-top: 10;
+    margin-bottom: 20px;
+    .detail{
+      margin-left: 20px;
+      line-height: 6px;
+      h5{
+        margin-top: 6px;
+      }
+      p{
+        font-weight: 200;
+      }
+    }
+
+  }
+  .wrap-icon{
+    @include iconCircle;
+    width: 60px;
+    height: 60px;
+    line-height: 56px;
+  }
+  .info-input{
+    width: 643px;
+    margin: 0 auto;
+    margin-right: 0;
+
+    input{
+      width: 100%;
+    }
+
+    .top-input{
+      display: flex;
+      justify-content:space-between;
+      input{
+        height: 35px;
+      }
+      .wrap-name-input{
+        width: 48%;
+      }
+      .wrap-mail-input{
+        width: 48%;
+      }
+    }
+
+    .bot-input{
+      input{
+        height: 120px;
+      }
+    }
+
+    .wrap-button{
+      height: 115px !important;
+      @include midButton;
+      button{
+        @include buttonSet;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+/***********************
+        FOOTER
+***********************/
+footer{
+  height: 300px;
+  background-color: #000;
+
+  hr{
+      border-color: #848484;
+      height: 0;
+    }
+  p{
+    color: #848484;
+  }
+  @include vertiMid;
+
+  .wrap-little-logo{
+    img{
+      width: 100px;
+      margin-left: -2px;
+    }
+  }
+  h5{
+    color: white;
+  }
+  a{
+    color: #848484;
+  }
+  a:hover{
+    color: #8DC63F;
+  }
+  .wrap-little-blog{
+    .little-blog{
+      height: 60px;
+      @include vertiMid;
+      flex-direction:row;
+      img{
+        width: 65px;
+        height: 60px;
+      }
+      line-height: 14px;
+      .blog-text{
+        padding-left: 10px;
+      }
+    }
+
+  }
+  .wrap-little-contact{
+    ul{
+      width: 50px;
+      display: flex;
+      justify-content:space-between;
+      padding-left: 0;
+
+    }
+  }
+  .wrap-bottom{
+    li{
+      float: left;
+      padding: 0 10px;
+    }
+    .active{
+      a{color: #8DC63F;}
+    }
+  }
+}
+
+
